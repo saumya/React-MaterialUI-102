@@ -1,8 +1,9 @@
 //
-//(function(){
+(function(){
   console.log('Reaction : 0.1.0');
   var React = require('react');
   var ReactDOM = require('react-dom');
+  //
   // ref : https://www.npmjs.com/package/react-tap-event-plugin
   var injectTapEventPlugin = require("react-tap-event-plugin");
   injectTapEventPlugin();
@@ -27,4 +28,4 @@
               );
   //
   var App = ReactDOM.render(<Router routes={routes} history={hashHistory} />,document.getElementById('react-app'));
-//})();
+})();
