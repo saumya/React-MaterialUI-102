@@ -40,7 +40,7 @@ var AppControllerView = React.createClass({
             onTitleTouchTap={onTitleTouchTapHandler}
             onLeftIconButtonTouchTap={onLeftIconTouchTapHandler}
             iconElementRight={<FlatButton label="Menu" onClick={that.onDone} />} />
-            <LeftNav open={this.state.open}>
+            <LeftNav docked={true} width={400} open={this.state.open} >
               <MenuItem>Menu Item</MenuItem>
               <MenuItem>Menu Item 2</MenuItem>
           </LeftNav>
