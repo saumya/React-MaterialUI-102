@@ -9,6 +9,10 @@ Versions:
  - react : ^15.0.0-rc.1
  - react-router : ^2.0.0
 
+It seems that the `onTouchTap` event is not working. So, currently I use
+ - onClick : for desktop
+ - onTouchEnd : for mobile
+
 
 
 
