@@ -29,16 +29,13 @@ var AppControllerView = React.createClass({
   render: function(){
     var that = this;
     var onTitleTouchTapHandler = function(){
-      //alert('onTitleTouchTapHandler');
       console.log('onTitleTouchTapHandler : Title :');
     }
     var onLeftIconTouchTapHandler = function(){
-      //alert('onLeftIconTouchTapHandler');
-      //this.setState({open: !this.state.open});
       console.log('onLeftIconTouchTapHandler : local');
       that.onMenuTouchTap();
     }
-    const style = {
+    var style = {
       position: 'absolute',
       bottom:20,
       right:20,
@@ -66,8 +63,6 @@ var AppControllerView = React.createClass({
     );
   },
   onTitleTouchTap: function(){
-    //debugger;
-    // Not working ! Need to see why ?
     console.log('onTitleTouchTapHandle');
   },
   onMenuTouchTap: function(){
@@ -80,7 +75,6 @@ var AppControllerView = React.createClass({
   },
   onDone: function(){
     console.log('onDone');
-    //this.setState({open: !this.state.open});
   },
   onMenuViewAll: function() {
     console.log('onMenuViewAll');
