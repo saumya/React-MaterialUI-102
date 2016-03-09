@@ -15,7 +15,11 @@ It seems that the `onTouchTap` event is not working. So, currently I use
  - onClick : for desktop
  - onTouchEnd : for mobile
 
-Checking the configuration now.
+
+Bug
+-------------
+There seems to be a Bug on [React 15.0.0-rc-1][react-bug-1]
+
 
 
 
@@ -30,3 +34,4 @@ Checking the configuration now.
 [2]: http://www.material-ui.com/
 [3]: https://www.npmjs.com/package/material-ui
 [4]: https://www.npmjs.com/package/react-tap-event-plugin
+[react-bug-1]: https://github.com/facebook/react/issues/6221
