@@ -17,7 +17,16 @@ import MobileTearSheet from './MobileTearSheet.react';
 import {cyan500} from 'material-ui/lib/styles/colors';
 import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
 import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
-
+/*
+For Themed UI : render
+return(
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <MobileTearSheet>
+      <list></list>
+    </MobileTearSheet>
+  </MuiThemeProvider>
+)
+*/
 
 var SeeAllControllerView = React.createClass({
   render: function(){
@@ -31,8 +40,7 @@ var SeeAllControllerView = React.createClass({
     });
 
     return (
-      <MuiThemeProvider muiTheme={muiTheme}>
-        <MobileTearSheet>
+        <div>
           <List>
             <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
             <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
@@ -47,8 +55,7 @@ var SeeAllControllerView = React.createClass({
             <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
             <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
           </List>
-        </MobileTearSheet>
-      </MuiThemeProvider>
+        </div>
     );
   }
 });
