@@ -71,10 +71,8 @@ var AppControllerView = React.createClass({
           <FloatingActionButton mini={false} secondary={false} style={style} onTouchTap={that.onAddHandler}>
             <ContentAdd />
           </FloatingActionButton>
-          <Dialog title="Dialog With Actions"
-            actions={actions}
-            modal={true}
-            open={this.state.dialogPopup.open}>
+          <Dialog title="Add the Item" actions={actions} modal={true} open={this.state.dialogPopup.open}>
+            Description of the item.
           </Dialog>
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
       </nav>
