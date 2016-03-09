@@ -11,6 +11,8 @@ var RaisedButton = require('material-ui/lib/raised-button') ;
 var FlatButton = require('material-ui/lib/flat-button');
 var LeftNav = require('material-ui/lib/left-nav');
 var MenuItem = require('material-ui/lib/menus/menu-item');
+var FloatingActionButton = require('material-ui/lib/floating-action-button');
+var ContentAdd = require ('material-ui/lib/svg-icons/content/add');
 
 var AppControllerView = React.createClass({
   contextTypes: {
@@ -36,6 +38,11 @@ var AppControllerView = React.createClass({
       console.log('onLeftIconTouchTapHandler : local');
       that.onMenuTouchTap();
     }
+    const style = {
+      position: 'absolute',
+      bottom:20,
+      right:20,
+    };
     //
     return (
       <nav>
@@ -49,7 +56,12 @@ var AppControllerView = React.createClass({
               <MenuItem onTouchTap={that.onMenuViewAll}>View All Items</MenuItem>
               <MenuItem>Logout</MenuItem>
           </LeftNav>
+
           { /* renders the children */ this.props.children }
+
+          <FloatingActionButton mini={false} secondary={false} style={style}>
+            <ContentAdd />
+          </FloatingActionButton>
       </nav>
     );
   },
