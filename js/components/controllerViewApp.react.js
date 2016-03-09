@@ -1,10 +1,10 @@
 //
 var React = require('react');
 // react-router
+var Router = require('react-router').Router;
 var Link = require('react-router').Link;
 var IndexLink = require('react-router').IndexLink;
 var browserHistory = require('react-router').browserHistory;
-
 // react material-ui
 var AppBar = require('material-ui/lib/app-bar') ;
 var RaisedButton = require('material-ui/lib/raised-button') ;
@@ -46,7 +46,7 @@ var AppControllerView = React.createClass({
             iconElementRight={<FlatButton label="Done" onTouchTap={that.onDone} />} />
           <LeftNav docked={false} width={300} swipeAreaWidth={100} open={this.state.open} onRequestChange={that.onRequestChange} >
               <MenuItem>Profile</MenuItem>
-              <MenuItem>View All Items</MenuItem>
+              <MenuItem onTouchTap={that.onMenuViewAll}>View All Items</MenuItem>
               <MenuItem>Logout</MenuItem>
           </LeftNav>
           { /* renders the children */ this.props.children }
@@ -70,8 +70,9 @@ var AppControllerView = React.createClass({
     console.log('onDone');
     //this.setState({open: !this.state.open});
   },
-  onHandleClick: function() {
-    console.log('onHandleClick');
+  onMenuViewAll: function() {
+    console.log('onMenuViewAll');
+    this.context.router.push('/see');
   }
 });
 module.exports = AppControllerView;
