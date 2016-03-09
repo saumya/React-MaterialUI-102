@@ -7,20 +7,11 @@ var HomeControllerView = React.createClass({
     var onTouchTap = function(){
       console.log('onTouchTap : Material Button');
     }
-    var onTouchEnd = function(){
-      console.log('onTouchEnd');
-    }
-    var onClick = function(){
-      console.log('onClick : Material Button');
-    }
     //
     return (
       <div>
         Welcome to your immediate requirement.
-        <RaisedButton label="Material Button !" 
-                onTouchTap={onTouchTap} 
-                onTouchEnd={onTouchEnd} 
-                onClick={onClick} />
+        <RaisedButton label="Material Button !" onTouchTap={onTouchTap}  />
       </div>
     );
   }

@@ -27,10 +27,14 @@ var AppControllerView = React.createClass({
   render: function(){
     var that = this;
     var onTitleTouchTapHandler = function(){
-      alert('onTitleTouchTapHandler');
+      //alert('onTitleTouchTapHandler');
+      console.log('onTitleTouchTapHandler : Title :');
     }
     var onLeftIconTouchTapHandler = function(){
-      alert('onLeftIconTouchTapHandler');
+      //alert('onLeftIconTouchTapHandler');
+      //this.setState({open: !this.state.open});
+      console.log('onLeftIconTouchTapHandler : local');
+      that.onMenuTouchTap();
     }
     //
     return (
@@ -39,8 +43,8 @@ var AppControllerView = React.createClass({
             title={<span style={that.styles.title}>My App Bar</span>}
             onTitleTouchTap={onTitleTouchTapHandler}
             onLeftIconButtonTouchTap={onLeftIconTouchTapHandler}
-            iconElementRight={<FlatButton label="Menu" onClick={that.onDone} />} />
-            <LeftNav docked={true} width={400} open={this.state.open} >
+            iconElementRight={<FlatButton label="Done" onTouchTap={that.onDone} />} />
+          <LeftNav docked={false} width={200} open={this.state.open} >
               <MenuItem>Menu Item</MenuItem>
               <MenuItem>Menu Item 2</MenuItem>
           </LeftNav>
@@ -53,9 +57,13 @@ var AppControllerView = React.createClass({
     // Not working ! Need to see why ?
     console.log('onTitleTouchTapHandle');
   },
+  onMenuTouchTap: function(){
+    console.log('onMenuTouchTap : Menu');
+    this.setState({open: !this.state.open});
+  },
   onDone: function(){
     console.log('onDone');
-    this.setState({open: !this.state.open});
+    //this.setState({open: !this.state.open});
   },
   onHandleClick: function() {
     console.log('onHandleClick');
