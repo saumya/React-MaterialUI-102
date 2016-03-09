@@ -20,17 +20,6 @@ return (
   )
 */
 
-
-const muiTheme = getMuiTheme({
-  palette: {
-    textColor: cyan500,
-  },
-  appBar: {
-    height: 50,
-  },
-});
-
-
 const MobileTearSheet = React.createClass({
 
   propTypes: {
