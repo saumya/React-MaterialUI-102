@@ -17,11 +17,10 @@ var HomeControllerView = React.createClass({
     return (
       <Card>
         <CardHeader
-          title="Without Avatar"
-          subtitle="Subtitle"
+          title="Green Beauty"
+          subtitle="Nature is at its best"
           actAsExpander={true}
-          showExpandableButton={true}
-        />
+          showExpandableButton={true} />
         <CardText expandable={true}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
