@@ -15,7 +15,7 @@ It seems that the `onTouchTap` event is not working. So, currently I use
  - onClick : for desktop
  - onTouchEnd : for mobile
 
-
+Checking the configuration now.
 
 
 
