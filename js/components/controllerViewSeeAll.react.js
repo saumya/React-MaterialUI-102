@@ -13,13 +13,26 @@ var ContentDrafts = require('material-ui/lib/svg-icons/content/drafts');
 var ContentSend = require('material-ui/lib/svg-icons/content/send');
 var Divider = require('material-ui/lib/divider');
 //
-// import MobileTearSheet from './MobileTearSheet.react';
+import MobileTearSheet from './MobileTearSheet.react';
+import {cyan500} from 'material-ui/lib/styles/colors';
+import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
+import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
 
 
 var SeeAllControllerView = React.createClass({
   render: function(){
+    const muiTheme = getMuiTheme({
+      palette: {
+        textColor: cyan500,
+      },
+      appBar: {
+        height: 50,
+      },
+    });
+
     return (
-      <div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <MobileTearSheet>
           <List>
             <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
             <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
@@ -34,7 +47,8 @@ var SeeAllControllerView = React.createClass({
             <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
             <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
           </List>
-      </div>
+        </MobileTearSheet>
+      </MuiThemeProvider>
     );
   }
 });

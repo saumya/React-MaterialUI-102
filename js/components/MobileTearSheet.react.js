@@ -9,6 +9,16 @@ import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
 // This replaces the textColor value on the palette
 // and then update the keys for each component that depends on it.
 // More on Colors: http://www.material-ui.com/#/customization/colors
+/*
+return (
+    <div style={prepareStyles(styles.root)}>
+      <div style={prepareStyles(styles.container)}>
+        {this.props.children}
+      </div>
+      <img style={prepareStyles(styles.bottomTear)} src="images/bottom-tear.svg" />
+    </div>
+  )
+*/
 
 
 const muiTheme = getMuiTheme({
@@ -39,7 +49,7 @@ const MobileTearSheet = React.createClass({
   },
 
   render() {
-    
+
     const {
       prepareStyles,
     } = this.context.muiTheme;
@@ -70,7 +80,7 @@ const MobileTearSheet = React.createClass({
         <div style={prepareStyles(styles.container)}>
           {this.props.children}
         </div>
-        <img style={prepareStyles(styles.bottomTear)} src="images/bottom-tear.svg" />
+        <img style={prepareStyles(styles.bottomTear)}/>
       </div>
     );
   },
