@@ -44,7 +44,7 @@ var AppControllerView = React.createClass({
             onTitleTouchTap={onTitleTouchTapHandler}
             onLeftIconButtonTouchTap={onLeftIconTouchTapHandler}
             iconElementRight={<FlatButton label="Done" onTouchTap={that.onDone} />} />
-          <LeftNav docked={false} width={200} open={this.state.open} onRequestChange={that.onRequestChange} >
+          <LeftNav docked={false} width={300} swipeAreaWidth={100} open={this.state.open} onRequestChange={that.onRequestChange} >
               <MenuItem>Profile</MenuItem>
               <MenuItem>View All Items</MenuItem>
               <MenuItem>Logout</MenuItem>
