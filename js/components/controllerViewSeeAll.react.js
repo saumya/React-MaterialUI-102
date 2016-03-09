@@ -12,12 +12,15 @@ var ContentInbox = require('material-ui/lib/svg-icons/content/inbox');
 var ContentDrafts = require('material-ui/lib/svg-icons/content/drafts');
 var ContentSend = require('material-ui/lib/svg-icons/content/send');
 var Divider = require('material-ui/lib/divider');
-
+//
+//var MobileTearSheet = require('./components/MobileTearSheet.react');
+import MobileTearSheet from './MobileTearSheet.react';
+//var TestComponent = require('./TestComp.react');
 
 var SeeAllControllerView = React.createClass({
   render: function(){
     return (
-      <div>
+      <MobileTearSheet>
           <List>
             <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
             <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
@@ -32,7 +35,7 @@ var SeeAllControllerView = React.createClass({
             <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
             <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
           </List>
-      </div>
+      </MobileTearSheet>
     );
   }
 });
