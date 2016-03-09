@@ -45,8 +45,9 @@ var AppControllerView = React.createClass({
             onLeftIconButtonTouchTap={onLeftIconTouchTapHandler}
             iconElementRight={<FlatButton label="Done" onTouchTap={that.onDone} />} />
           <LeftNav docked={false} width={200} open={this.state.open} onRequestChange={that.onRequestChange} >
-              <MenuItem>Menu Item</MenuItem>
-              <MenuItem>Menu Item 2</MenuItem>
+              <MenuItem>Profile</MenuItem>
+              <MenuItem>View All Items</MenuItem>
+              <MenuItem>Logout</MenuItem>
           </LeftNav>
           { /* renders the children */ this.props.children }
       </nav>
