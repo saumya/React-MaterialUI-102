@@ -1,4 +1,25 @@
+//
 import React from 'react';
+//
+import {cyan500} from 'material-ui/lib/styles/colors';
+import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
+import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
+//
+// Ref : http://www.material-ui.com/v0.15.0-alpha.1/#/customization/themes
+// This replaces the textColor value on the palette
+// and then update the keys for each component that depends on it.
+// More on Colors: http://www.material-ui.com/#/customization/colors
+
+
+const muiTheme = getMuiTheme({
+  palette: {
+    textColor: cyan500,
+  },
+  appBar: {
+    height: 50,
+  },
+});
+
 
 const MobileTearSheet = React.createClass({
 
@@ -8,7 +29,7 @@ const MobileTearSheet = React.createClass({
   },
 
   contextTypes: {
-    muiTheme: React.PropTypes.object,
+    muiTheme: React.PropTypes.object.isRequired,
   },
 
   getDefaultProps() {
@@ -18,6 +39,7 @@ const MobileTearSheet = React.createClass({
   },
 
   render() {
+    
     const {
       prepareStyles,
     } = this.context.muiTheme;

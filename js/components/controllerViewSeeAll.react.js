@@ -2,7 +2,7 @@
 var React = require('react');
 //
 //var MobileTearSheet = require('../../../MobileTearSheet');
-var SelectableContainerEnhance = require('material-ui/lib/hoc/selectable-enhance');
+//var SelectableContainerEnhance = require('material-ui/lib/hoc/selectable-enhance');
 
 var List = require('material-ui/lib/lists/list');
 var ListItem = require('material-ui/lib/lists/list-item');
@@ -13,14 +13,13 @@ var ContentDrafts = require('material-ui/lib/svg-icons/content/drafts');
 var ContentSend = require('material-ui/lib/svg-icons/content/send');
 var Divider = require('material-ui/lib/divider');
 //
-//var MobileTearSheet = require('./components/MobileTearSheet.react');
-import MobileTearSheet from './MobileTearSheet.react';
-//var TestComponent = require('./TestComp.react');
+// import MobileTearSheet from './MobileTearSheet.react';
+
 
 var SeeAllControllerView = React.createClass({
   render: function(){
     return (
-      <MobileTearSheet>
+      <div>
           <List>
             <ListItem primaryText="Inbox" leftIcon={<ContentInbox />} />
             <ListItem primaryText="Starred" leftIcon={<ActionGrade />} />
@@ -35,7 +34,7 @@ var SeeAllControllerView = React.createClass({
             <ListItem primaryText="Spam" rightIcon={<ActionInfo />} />
             <ListItem primaryText="Follow up" rightIcon={<ActionInfo />} />
           </List>
-      </MobileTearSheet>
+      </div>
     );
   }
 });
