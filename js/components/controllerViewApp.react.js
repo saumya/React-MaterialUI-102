@@ -44,7 +44,7 @@ var AppControllerView = React.createClass({
             onTitleTouchTap={onTitleTouchTapHandler}
             onLeftIconButtonTouchTap={onLeftIconTouchTapHandler}
             iconElementRight={<FlatButton label="Done" onTouchTap={that.onDone} />} />
-          <LeftNav docked={false} width={200} open={this.state.open} >
+          <LeftNav docked={false} width={200} open={this.state.open} onRequestChange={that.onRequestChange} >
               <MenuItem>Menu Item</MenuItem>
               <MenuItem>Menu Item 2</MenuItem>
           </LeftNav>
@@ -59,6 +59,10 @@ var AppControllerView = React.createClass({
   },
   onMenuTouchTap: function(){
     console.log('onMenuTouchTap : Menu');
+    this.setState({open: !this.state.open});
+  },
+  onRequestChange: function(){
+    console.log('onRequestChange :');
     this.setState({open: !this.state.open});
   },
   onDone: function(){
