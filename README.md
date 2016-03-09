@@ -16,7 +16,8 @@ There seems to be a Bug on [React 15.0.0-rc-1][react-bug-1]
 
 Note
 ----------
-Reverted to react version 0.14.7
+Reverted to react version 0.14.7          
+
 Continuing the work further, this project now uses the following versions
 
 - material-ui   : 0.15.0-alpha.1
