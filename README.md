@@ -5,23 +5,24 @@ Firstly the versions used are as below.
 
 Versions
 --------------
- - material-ui  : ^0.15.0-alpha.1
- - react        : ^15.0.0-rc.1
- - react-dom    : ^15.0.0-rc.1
- - react-router : ^2.0.0
+ - material-ui  : 0.15.0-alpha.1
+ - react        : 15.0.0-rc.1
+ - react-dom    : 15.0.0-rc.1
+ - react-router : 2.0.0
 
- Bug
- -------------
- There seems to be a Bug on [React 15.0.0-rc-1][react-bug-1]
+Bug
+-------------
+There seems to be a Bug on [React 15.0.0-rc-1][react-bug-1]
 
 Note
 ----------
+Reverted to react version 0.14.7
 Continuing the work further, this project now uses the following versions
 
-- material-ui   : ^0.15.0-alpha.1
-- react         : ^0.14.7
-- react-dom     : ^0.14.7
-- react-router  : ^2.0.0
+- material-ui   : 0.15.0-alpha.1
+- react         : 0.14.7
+- react-dom     : 0.14.7
+- react-router  : 2.0.0
 
 
 
