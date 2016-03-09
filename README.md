@@ -16,7 +16,7 @@ There seems to be a Bug on [React 15.0.0-rc-1][react-bug-1]
 
 Note
 ----------
-Reverted to react version 0.14.7          
+Reverted to [react version 0.14.7][repo-diff]          
 
 Continuing the work further, this project now uses the following versions
 
@@ -36,3 +36,4 @@ Continuing the work further, this project now uses the following versions
 [3]: https://www.npmjs.com/package/material-ui
 [4]: https://www.npmjs.com/package/react-tap-event-plugin
 [react-bug-1]: https://github.com/facebook/react/issues/6221
+[repo-diff-1]: https://github.com/saumya/React-MaterialUI-102/commit/6921343f70934e056c93d3d46e1148daaf52a0f3
