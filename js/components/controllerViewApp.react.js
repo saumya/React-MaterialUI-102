@@ -49,13 +49,8 @@ var AppControllerView = React.createClass({
     };
     //
     var actions = [
-      <FlatButton label="Cancel"
-        secondary={true}
-        onTouchTap={this.onDone} />,
-      <FlatButton label="Submit"
-        primary={true}
-        disabled={true}
-        onTouchTap={this.onDone} />,
+      <FlatButton label="Cancel" secondary={true} onTouchTap={this.onDialogueCancel} />,
+      <FlatButton label="Ok" primary={true} disabled={false} onTouchTap={this.onDialogueOk} />,
     ];
     //
     return (
@@ -101,6 +96,15 @@ var AppControllerView = React.createClass({
   },
   onAddHandler: function(){
     console.log('onAddHandler');
+    this.setState({dialogPopup:{open: !this.state.dialogPopup.open}});
+  },
+  onDialogueCancel: function(){
+    console.log('onDialogueCancel');
+    this.setState({dialogPopup:{open: !this.state.dialogPopup.open}});
+  },
+  onDialogueOk: function(){
+    console.log('onDialogueOk');
+    this.setState({dialogPopup:{open: !this.state.dialogPopup.open}});
   },
   onMenuViewAll: function() {
     console.log('onMenuViewAll');
