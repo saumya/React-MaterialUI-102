@@ -78,8 +78,8 @@ var AppControllerView = React.createClass({
             Description of the item.
             <Calendar
               DateTimeFormat={DateTime.DateTimeFormat}
-              firstDayOfWeek={1}
-              locale={''}
+              firstDayOfWeek={0}
+              locale="en-US"
               ref="calendar"
               onDayTouchTap={this.handleTouchTapDay}
               initialDate={this.props.initialDate}
