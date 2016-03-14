@@ -16,6 +16,9 @@ var ContentAdd = require ('material-ui/lib/svg-icons/content/add');
 var DatePicker = require ('material-ui/lib/date-picker/date-picker');
 var Dialog = require ('material-ui/lib/dialog');
 
+var Calendar = require ('material-ui/lib/date-picker/calendar');
+var DateTime = require ('material-ui/lib/utils/date-time');
+
 var AppControllerView = React.createClass({
   contextTypes: {
     router: React.PropTypes.object.isRequired,
@@ -73,6 +76,20 @@ var AppControllerView = React.createClass({
           </FloatingActionButton>
           <Dialog title="Add the Item" actions={actions} modal={true} open={this.state.dialogPopup.open}>
             Description of the item.
+            <Calendar
+              DateTimeFormat={DateTime.DateTimeFormat}
+              firstDayOfWeek={1}
+              locale={''}
+              ref="calendar"
+              onDayTouchTap={this.handleTouchTapDay}
+              initialDate={this.props.initialDate}
+              open={this.state.open}
+              minDate={this.props.minDate}
+              maxDate={this.props.maxDate}
+              shouldDisableDate={this.props.shouldDisableDate}
+              disableYearSelection={this.props.disableYearSelection}
+              mode={this.props.mode}
+            />
           </Dialog>
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
       </nav>

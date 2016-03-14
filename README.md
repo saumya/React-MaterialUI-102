@@ -25,6 +25,23 @@ Continuing the work further, this project now uses the following versions
 - react-dom     : 0.14.7
 - react-router  : 2.0.0
 
+TODO: Fix the Calender bug
+----------------
+[Reference :][ref-1]
+<Calendar
+  DateTimeFormat={DateTime.DateTimeFormat}
+  firstDayOfWeek={firstDayOfWeek}
+  locale={locale}
+  ref="calendar"
+  onDayTouchTap={this.handleTouchTapDay}
+  initialDate={this.props.initialDate}
+  open={this.state.open}
+  minDate={this.props.minDate}
+  maxDate={this.props.maxDate}
+  shouldDisableDate={this.props.shouldDisableDate}
+  disableYearSelection={this.props.disableYearSelection}
+  mode={this.props.mode}
+/>
 
 
 
@@ -36,3 +53,4 @@ Continuing the work further, this project now uses the following versions
 [4]: https://www.npmjs.com/package/react-tap-event-plugin
 [react-bug-1]: https://github.com/facebook/react/issues/6221
 [repo-diff-1]: https://github.com/saumya/React-MaterialUI-102/commit/6921343f70934e056c93d3d46e1148daaf52a0f3
+[ref-1]: https://github.com/callemall/material-ui/blob/master/src/date-picker/date-picker-dialog.jsx
