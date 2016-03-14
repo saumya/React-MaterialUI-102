@@ -95,8 +95,10 @@ var AppControllerView = React.createClass({
       </nav>
     );
   },
-  handleTouchTapDay: function(dataObj){
-    console.log('onTouchTapDay:',dataObj);
+  handleTouchTapDay: function(evtObj,dateObj){
+    console.log('onTouchTapDay:evtObj:',evtObj);
+    console.log('onTouchTapDay:dateObj:',dateObj);
+    //TODO: add the new date inside counter
   },
   onTitleTouchTap: function(){
     console.log('onTitleTouchTapHandle');
