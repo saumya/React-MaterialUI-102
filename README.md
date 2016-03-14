@@ -27,7 +27,7 @@ Continuing the work further, this project now uses the following versions
 
 TODO: Fix the Calender bug
 ----------------
-[Reference :][ref-1] , [stackoverflow :][ref-2-so]
+Reference : [Code][ref-1] , [stackoverflow][ref-2-so]
 
 <Calendar
   DateTimeFormat={DateTime.DateTimeFormat}
