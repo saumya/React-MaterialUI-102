@@ -74,8 +74,8 @@ var AppControllerView = React.createClass({
           <FloatingActionButton mini={false} secondary={false} style={style} onTouchTap={that.onAddHandler}>
             <ContentAdd />
           </FloatingActionButton>
-          <Dialog title="Add the Item" actions={actions} modal={true} open={this.state.dialogPopup.open}>
-            Description of the item.
+          <Dialog title="Add to Count" actions={actions} modal={true} open={this.state.dialogPopup.open}>
+            Which date you want to add to the count ?
             <Calendar
               DateTimeFormat={DateTime.DateTimeFormat}
               firstDayOfWeek={0}
@@ -94,6 +94,9 @@ var AppControllerView = React.createClass({
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
       </nav>
     );
+  },
+  handleTouchTapDay: function(dataObj){
+    console.log('onTouchTapDay:',dataObj);
   },
   onTitleTouchTap: function(){
     console.log('onTitleTouchTapHandle');
