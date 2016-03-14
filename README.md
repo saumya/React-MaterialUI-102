@@ -27,7 +27,8 @@ Continuing the work further, this project now uses the following versions
 
 TODO: Fix the Calender bug
 ----------------
-[Reference :][ref-1]
+[Reference :][ref-1] , [stackoverflow :][ref-2-so]
+
 <Calendar
   DateTimeFormat={DateTime.DateTimeFormat}
   firstDayOfWeek={firstDayOfWeek}
@@ -54,3 +55,4 @@ TODO: Fix the Calender bug
 [react-bug-1]: https://github.com/facebook/react/issues/6221
 [repo-diff-1]: https://github.com/saumya/React-MaterialUI-102/commit/6921343f70934e056c93d3d46e1148daaf52a0f3
 [ref-1]: https://github.com/callemall/material-ui/blob/master/src/date-picker/date-picker-dialog.jsx
+[ref-2-so]: http://stackoverflow.com/questions/35378272/render-full-calendar-of-datepicker-on-a-page
