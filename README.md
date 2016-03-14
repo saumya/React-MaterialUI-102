@@ -25,25 +25,9 @@ Continuing the work further, this project now uses the following versions
 - react-dom     : 0.14.7
 - react-router  : 2.0.0
 
-TODO: Fix the Calender bug
+TODO
 ----------------
-Reference : [Code][ref-1] , [stackoverflow][ref-2-so]
-
-<Calendar
-  DateTimeFormat={DateTime.DateTimeFormat}
-  firstDayOfWeek={firstDayOfWeek}
-  locale={locale}
-  ref="calendar"
-  onDayTouchTap={this.handleTouchTapDay}
-  initialDate={this.props.initialDate}
-  open={this.state.open}
-  minDate={this.props.minDate}
-  maxDate={this.props.maxDate}
-  shouldDisableDate={this.props.shouldDisableDate}
-  disableYearSelection={this.props.disableYearSelection}
-  mode={this.props.mode}
-/>
-
+ - Add the event handlers in the Date picker
 
 
 
