@@ -99,6 +99,7 @@ var AppControllerView = React.createClass({
     console.log('onTouchTapDay:evtObj:',evtObj);
     console.log('onTouchTapDay:dateObj:',dateObj);
     //TODO: add the new date inside counter
+    // Save in memory then will save in local database
   },
   onTitleTouchTap: function(){
     console.log('onTitleTouchTapHandle');
