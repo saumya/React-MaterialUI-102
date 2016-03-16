@@ -18,6 +18,8 @@ var Dialog = require ('material-ui/lib/dialog');
 
 var Calendar = require ('material-ui/lib/date-picker/calendar');
 var DateTime = require ('material-ui/lib/utils/date-time');
+//
+var CounterView = require('./CounterView.react');
 
 var AppControllerView = React.createClass({
   contextTypes: {
@@ -97,15 +99,7 @@ var AppControllerView = React.createClass({
             />
           </Dialog>
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
-          
-            <ul>
-            {
-              this.state.allDates.map(function(item) {
-                var sDate = item.getFullYear()+'/'+(item.getMonth()+1)+'/'+item.getDate();
-                return <li key={sDate}>{sDate}</li>
-              })
-            }
-            </ul>
+          <CounterView allCounts={this.state.allDates} />
       </nav>
     );
   },
