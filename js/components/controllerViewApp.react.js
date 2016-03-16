@@ -31,12 +31,17 @@ var AppControllerView = React.createClass({
   getInitialState: function() {
     return (
       {
+        selectedDate:'',
+        allDates:[],
         leftMenu:{open:false},
-        dialogPopup:{open:false},
+        dialogPopup:{open:false}
       }
     );
   },
   render: function(){
+    console.log('controllerViewApp:render:this.state.allDates',this.state.allDates);
+    //TODO: Render the saved Dates
+    //
     var that = this;
     var onTitleTouchTapHandler = function(){
       console.log('onTitleTouchTapHandler : Title :');
@@ -98,8 +103,7 @@ var AppControllerView = React.createClass({
   handleTouchTapDay: function(evtObj,dateObj){
     console.log('onTouchTapDay:evtObj:',evtObj);
     console.log('onTouchTapDay:dateObj:',dateObj);
-    //TODO: add the new date inside counter
-    // Save in memory then will save in local database
+    this.state.selectedDate = dateObj;
   },
   onTitleTouchTap: function(){
     console.log('onTitleTouchTapHandle');
@@ -121,15 +125,28 @@ var AppControllerView = React.createClass({
   },
   onDialogueCancel: function(){
     console.log('onDialogueCancel');
+    console.log('onDialogueCancel:this.state.selectedDate',this.state.selectedDate);
     this.setState({dialogPopup:{open: !this.state.dialogPopup.open}});
+    this.clearDateSelection();
   },
   onDialogueOk: function(){
     console.log('onDialogueOk');
+    console.log('onDialogueOk:this.state.selectedDate',this.state.selectedDate);
     this.setState({dialogPopup:{open: !this.state.dialogPopup.open}});
+    //
+    if(this.state.selectedDate===''){
+      // Do Nothing
+    }else{
+      this.state.allDates.push(this.state.selectedDate);
+    }
+    this.clearDateSelection();
   },
   onMenuViewAll: function() {
     console.log('onMenuViewAll');
     this.context.router.push('/see');
-  }
+  },
+  clearDateSelection: function(){
+    this.state.selectedDate = '';
+  },
 });
 module.exports = AppControllerView;
