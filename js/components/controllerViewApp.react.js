@@ -82,9 +82,6 @@ var AppControllerView = React.createClass({
 
           { /* renders the children */ this.props.children }
 
-          <FloatingActionButton mini={false} secondary={false} style={style} onTouchTap={that.onAddHandler}>
-            <ContentAdd />
-          </FloatingActionButton>
           <Dialog title="Add to Count" actions={actions} modal={true} open={this.state.dialogPopup.open}>
             Which date you want to add to the count ?
             <Calendar
@@ -107,6 +104,10 @@ var AppControllerView = React.createClass({
             <NotificationsIcon />
           </Badge>
           <CounterView allCounts={this.state.allDates} />
+
+          <FloatingActionButton mini={false} secondary={false} style={style} onTouchTap={that.onAddHandler}>
+            <ContentAdd />
+          </FloatingActionButton>
       </nav>
     );
   },
