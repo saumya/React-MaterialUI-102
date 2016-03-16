@@ -97,6 +97,16 @@ var AppControllerView = React.createClass({
             />
           </Dialog>
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
+
+            <ul>
+            {
+              this.state.allDates.map(function(item) {
+                //var sDate = item.getDate()+'/'+(item.getMonth()+1)+'/'+item.getFullYear();
+                var sDate = item.getFullYear()+'/'+(item.getMonth()+1)+'/'+item.getDate();
+                return <li key={sDate}>{sDate}</li>
+              })
+            }
+            </ul>
       </nav>
     );
   },
