@@ -3,6 +3,15 @@
 // it gets the list data as the props from its ControllerView
 //
 var React = require('react');
+//
+var List = require('material-ui/lib/lists/list');
+var ListItem = require('material-ui/lib/lists/list-item');
+var ActionGrade = require('material-ui/lib/svg-icons/action/grade');
+var ActionInfo = require('material-ui/lib/svg-icons/action/info');
+var ContentInbox = require('material-ui/lib/svg-icons/content/inbox');
+var ContentDrafts = require('material-ui/lib/svg-icons/content/drafts');
+var ContentSend = require('material-ui/lib/svg-icons/content/send');
+var Divider = require('material-ui/lib/divider');
 
 var CounterView = React.createClass({
   propTypes:{
@@ -12,14 +21,15 @@ var CounterView = React.createClass({
     return(
       <div>
         Counter View
-        <ul>
+        <List>
         {
           this.props.allCounts.map(function(item) {
             var sDate = item.getFullYear()+'/'+(item.getMonth()+1)+'/'+item.getDate();
-            return <li key={sDate}>{sDate}</li>
+            //return <li key={sDate}>{sDate}</li>
+            return (<ListItem primaryText={sDate} key={sDate} leftIcon={<ContentInbox />} />)
           })
         }
-        </ul>
+        </List>
       </div>
     );
   }
