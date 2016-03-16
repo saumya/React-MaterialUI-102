@@ -27,7 +27,8 @@ Continuing the work further, this project now uses the following versions
 
 TODO
 ----------------
- - Add the event handlers in the Date picker
+Bug fix
+ - Adding same date twice throws error
 
 
 

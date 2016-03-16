@@ -18,6 +18,10 @@ var Dialog = require ('material-ui/lib/dialog');
 
 var Calendar = require ('material-ui/lib/date-picker/calendar');
 var DateTime = require ('material-ui/lib/utils/date-time');
+
+var Badge = require('material-ui/lib/badge');
+var IconButton = require('material-ui/lib/icon-button');
+var NotificationsIcon = require('material-ui/lib/svg-icons/social/notifications');
 //
 var CounterView = require('./CounterView.react');
 
@@ -99,6 +103,9 @@ var AppControllerView = React.createClass({
             />
           </Dialog>
           <DatePicker hintText="Portrait Dialog" mode="portrait" disabled={false} />
+          <Badge badgeContent={this.state.allDates.length} primary={true} >
+            <NotificationsIcon />
+          </Badge>
           <CounterView allCounts={this.state.allDates} />
       </nav>
     );
