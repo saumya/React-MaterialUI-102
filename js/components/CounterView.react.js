@@ -9,8 +9,6 @@ var ListItem = require('material-ui/lib/lists/list-item');
 var ActionGrade = require('material-ui/lib/svg-icons/action/grade');
 var ActionInfo = require('material-ui/lib/svg-icons/action/info');
 var ContentInbox = require('material-ui/lib/svg-icons/content/inbox');
-var ContentDrafts = require('material-ui/lib/svg-icons/content/drafts');
-var ContentSend = require('material-ui/lib/svg-icons/content/send');
 var Divider = require('material-ui/lib/divider');
 
 var CounterView = React.createClass({
