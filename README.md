@@ -29,6 +29,9 @@ TODO
 ----------------
 Bug fix
  - Adding same date twice throws error
+ - Add a clear button to clear all the previous counts
+ - Save data, locally first
+ - Save data on server
 
 
 
