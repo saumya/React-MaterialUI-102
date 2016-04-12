@@ -27,12 +27,13 @@ Continuing the work further, this project now uses the following versions
 
 TODO
 ----------------
+
 Bug fix
  - Adding same date twice throws error
  - Add a clear button to clear all the previous counts
  - Save data, locally first
  - Save data on server
-
+ - Update to the latest versions of react and materialui / make another project for doing the same
 
 
 
