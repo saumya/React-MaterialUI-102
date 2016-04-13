@@ -1,7 +1,7 @@
 React And MaterialUI
 ==============================
 
-Firstly the versions used are as below.
+The versions used are as below.
 
 Versions
 --------------
